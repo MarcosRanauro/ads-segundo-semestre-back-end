@@ -5,5 +5,5 @@
   unset($_SESSION['autenticado_2fa']);
   unset($_SESSION['usu_cpf']);
   session_destroy();
-  header('Location: Login.php');
+  header('Location: ../html/Login.php');
 ?>

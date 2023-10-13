@@ -4,7 +4,7 @@
 
                 <?php
                 session_start();
-                require_once('./html/tokenFunc.php');
+                require_once('./components/tokenFunc.php');
                 // Nome da chave do token
                 $token_key = 'temp_token';
                 // Verifique o token (se necessário)
@@ -47,7 +47,7 @@
                                     <?php } else { ?>
                                         <li><a href="html/perfil.php">Meu Perfil</a></li>
                                     <?php } ?>
-                                    <li><a href="html/sair.php">Sair</a></li>
+                                    <li><a href="./components/sair.php">Sair</a></li>
                                 <?php } else { ?>
                                     <li><a class="menu-primario" href="#">WhatsApp</a></li>
                                     <li><a class="menu-primario" href="#">FAQ</a></li>

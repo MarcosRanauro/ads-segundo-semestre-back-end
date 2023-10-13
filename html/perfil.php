@@ -2,7 +2,7 @@
 session_start();
 // print_r($_SESSION);
 
-require_once('tokenFunc.php');
+require_once('../components/tokenFunc.php');
 
 if(!isset($_SESSION['usu_login']) == true && !isset($_SESSION['usu_senha']) == true) {
   unset($_SESSION['usu_login']);
@@ -14,7 +14,7 @@ $token_key = 'temp_token';
 if(!verificarToken($token_key)) {
   unset($_SESSION['autenticado_2fa']);
   unset($_SESSION['usu_cpf']);
-  header('Location: 2ffa.php');
+  header('Location: Login.php');
 }
 
 if(!isset($_SESSION['autenticado_2fa'])) {
@@ -73,7 +73,7 @@ if($result && $result->num_rows > 0) {
   Telefone Fixo: <?php echo $logado_telefoneFixo; ?> <br>
   Endereço: <?php echo $logado_endereco; ?> <br>
   <a href="../index.php">Home</a>
-  <a href="sair.php">Sair</a>
+  <a href="../components/sair.php">Sair</a>
 </body>
 
 </html>

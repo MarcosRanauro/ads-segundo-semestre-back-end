@@ -1,13 +1,13 @@
 <?php
 session_start();
 // print_r($_SESSION);
+
 if(!isset($_SESSION['usu_login']) == true && !isset($_SESSION['usu_senha']) == true && !isset($_SESSION['tipo_usuario']) == 'master') {
   unset($_SESSION['usu_login']);
   unset($_SESSION['usu_senha']);
   unset($_SESSION['tipo_usuario']);
   header('Location: Login.php');
 }
-
 
 $logado_login = $_SESSION['usu_login'];
 $logado_senha = $_SESSION['usu_senha'];
@@ -64,6 +64,6 @@ if($result && $result->num_rows > 0) {
   Telefone Fixo: <?php echo $logado_telefoneFixo; ?> <br>
   Endereço: <?php echo $logado_endereco; ?> <br>
   <a href="../index.php">Home</a>
-  <a href="sair.php">Sair</a>
+  <a href="../components/sair.php">Sair</a>
 </body>
 </html>
