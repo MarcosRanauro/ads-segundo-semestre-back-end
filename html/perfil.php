@@ -26,7 +26,7 @@ if(!isset($_SESSION['autenticado_2fa'])) {
 $logado_login = $_SESSION['usu_login'];
 $logado_senha = $_SESSION['usu_senha'];
 
-include_once('config.php');
+include_once('../components/config.php');
 
 $sql = "SELECT * FROM usuarios WHERE usu_login = '$logado_login' AND usu_senha = '$logado_senha'";
 $result = $conexao->query($sql);

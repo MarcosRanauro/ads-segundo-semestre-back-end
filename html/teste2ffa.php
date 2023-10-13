@@ -2,7 +2,7 @@
 session_start();
 
 if (isset($_POST['submit']) && !empty($_POST['cpf']) && isset($_SESSION['usu_cpf'])) {
-  include_once('config.php');
+  include_once('../components/config.php');
   $cpf = $_POST['cpf'];
   $cpf_session = $_SESSION['usu_cpf'];
   // print_r($cpf);
