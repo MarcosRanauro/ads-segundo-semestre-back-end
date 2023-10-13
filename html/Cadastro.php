@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         $errorMessages = json_encode($errors);
         
         // Redirecione o usuário para a página de erro com as mensagens de erro
-        header("Location: erro.php?errors=$errorMessages");
+        header("Location: ../components/erro.php?errors=$errorMessages");
         exit; // Encerre o script
     } else {
         // Não houve erros, prossiga com a inserção no banco de dados
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
             exit; // Encerre o script
         } else {
             // Redirecione o usuário para a página de erro
-            header("Location: erro.php");
+            header("Location: ../components/erro.php");
             exit; // Encerre o script
         }
     }

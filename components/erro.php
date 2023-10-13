@@ -21,6 +21,6 @@
         }
         ?>
     </ul>
-    <a href="Cadastro.php">Voltar para a página de cadastro</a>
+    <a href="../html/Cadastro.php">Voltar para a página de cadastro</a>
 </body>
 </html>
