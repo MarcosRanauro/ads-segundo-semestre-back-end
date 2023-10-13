@@ -43,9 +43,9 @@
                                 <?php if ($_SESSION['tipo_usuario']) { ?>
                                     <li>Olá, <?php echo $_SESSION['usu_login']; ?></li>
                                     <?php if ($_SESSION['tipo_usuario'] === 'master') { ?>
-                                        <li><a href="html/perfilMaster.php">Meu Perfil</a></li>
+                                        <li><a href="pages/perfilMaster.php">Meu Perfil</a></li>
                                     <?php } else { ?>
-                                        <li><a href="html/perfil.php">Meu Perfil</a></li>
+                                        <li><a href="pages/perfil.php">Meu Perfil</a></li>
                                     <?php } ?>
                                     <li><a href="./components/sair.php">Sair</a></li>
                                 <?php } else { ?>
@@ -54,7 +54,7 @@
                                     <li><a class="menu-primario" href="#">Carreiras</a></li>
                                     <li><a class="menu-primario" href="#">Contato</a></li>
                                     <li><a class="menu-primario" href="#">Português</a></li>
-                                    <a class="botao-login" href="./html/Login.php">
+                                    <a class="botao-login" href="./pages/Login.php">
                                         <i class="fa-solid fa-user" style="color: #ffffff;"></i>
                                         <button class="botao-login-b">Área do Cliente</button>
                                     </a>
@@ -63,7 +63,7 @@
                         </section>
 
                         <section class="cabecalho-secundario">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="img/navbar-logo.png" alt="essa é a logo da Telecall">
                             </a>
                             <nav class="nav-2">
@@ -96,7 +96,7 @@
                                             <li><a class="submenu" href="#">MVNA/E</a></li>
                                         </ul>
                                     </li>
-                                    <li class="navbar"><a class="menu-opcoes" href="./html/produto.html">CPaaS</a></li>
+                                    <li class="navbar"><a class="menu-opcoes" href="./pages/produto.html">CPaaS</a></li>
 
                                     <li class="navbar"><a class="menu-opcoes" href="#">Outras soluções</a>
                                         <ul>
@@ -113,7 +113,7 @@
                             <h1>CPAAS, SERVIÇO DE QUALIDADE!</h1>
                             <p>Venha conhecer nosso novo serviço voltado para o CPaaS!</br>
                                 Saiba mais e fale com um dos nossos especialistas.</p>
-                            <a class="saiba-mais-button" href="./html/produto.html">Saiba mais</a>
+                            <a class="saiba-mais-button" href="./pages/produto.html">Saiba mais</a>
                         </section>
                         <section class="container-quem-somos">
                             <div class="esq-quem-somos">

@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
         </section>
 
         <section class="cabecalho-secundario">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img src="../img/navbar-logo.png" alt="essa é a logo da Telecall">
             </a>
             <nav>
@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                 <div class="form-control form-control-lg input-container">
                     <h1>Crie sua conta</h1>
                     <label for="nome" class="col-form-label">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="nome" minlength="15" maxlength="60">
+                    <input class="form-control" type="text" name="nome" id="nome" minlength="15" maxlength="60" require>
 
                     <label for="dataNascimento" class="col-form-label">Data de Nascimento:</label>
                     <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">

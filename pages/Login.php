@@ -75,7 +75,7 @@
 							Não tem uma conta?
 						</span>
 
-						<a class="txt2" href="../html/Cadastro.php">
+						<a class="txt2" href="../pages/Cadastro.php">
 							Cadastre-se
 						</a>
 					</div>
