@@ -9,7 +9,6 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/produtos.css">
-    <link rel="stylesheet" href="../styles/2fa.css">
     <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <title>CPaaS Telecall</title>
 </head>
@@ -28,7 +27,7 @@
                 <li><a class="menu-primario" href="#">Carreiras</a></li>
                 <li><a class="menu-primario" href="#">Contato</a></li>
                 <li><a class="menu-primario" href="#">Português</a></li>
-                <a class="botao-login" href="../html/Login.html">
+                <a class="botao-login" href="../pages/Login.php">
                     <i class="fa-solid fa-user" style="color: #ffffff;"></i>
                     <button class="botao-login-b">Área do Cliente</button>
                 </a>
@@ -36,7 +35,7 @@
         </section>
 
         <section class="cabecalho-secundario-cpaas">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img src="../img/navbar-logo.png" alt="essa é a logo da Telecall">
             </a>
             <nav>
@@ -81,54 +80,83 @@
             </nav>
         </section>
     </header>
-    <div class="main-produto">
-        <section class="main-produto-back">
-            <div class="main-produto-titulo">
-                <div>
-                    <h2>2FA - Autentificação de 2 fatores</h2>
-                    <a href="Login.html">Fale com nossos especialistas</a>
+    <div class="main-cpaas">
+        <div class="main-cpaas-titulo">
+            <section class="cpaas-titulo">
+                <h1>PLATAFORMA CPAAS</h1>
+                <p>Atualize sua rede com nosso novo serviço voltado para integração dos canais de comunicação.</p>
+                <a href="Login.php">Fale com nossos especialistas</a>
+            </section>
+            <section class="img-inicio-cpaas">
+                <img src="../img/cpaas-inicio.jpg" alt="Essa é uma imagem sobre CPaaS">
+            </section>
+        </div>
+        <div class="main-cpaas-descri">
+            <section class="main-cpaas-descri-pri">
+                <h2>O que é CPaaS?</h2>
+                <p>CPaaS (Comunicações como Serviço, do inglês Communications Platform as a Service) é uma categoria de
+                    serviços em nuvem que oferece recursos de comunicação e colaboração para empresas e desenvolvedores.
+                    O CPaaS permite que as empresas integrem recursos de comunicação, como voz, vídeo, mensagens de
+                    texto e autenticação de dois fatores, em seus aplicativos, serviços ou sistemas existentes por meio
+                    de APIs (Interfaces de Programação de Aplicativos).</p>
+            </section>
+            <section class="main-cpaas-descri-sec">
+                <h2>Pra que serve?</h2>
+                <p>Ao adotar uma solução CPaaS, as empresas podem aproveitar as capacidades de comunicação em tempo real
+                    para melhorar a experiência do cliente, aumentar a eficiência operacional e fornecer canais de
+                    comunicação modernos. Isso inclui recursos como chamadas de voz e vídeo em tempo real, mensagens
+                    instantâneas, notificações por SMS, autenticação de dois fatores, serviços de fax e muito mais. O
+                    CPaaS
+                    tem sido amplamente adotado em diversas indústrias, como atendimento ao cliente, serviços
+                    financeiros,
+                    comércio eletrônico, saúde e muito mais. Ele fornece uma maneira flexível e escalável de adicionar
+                    recursos de comunicação em aplicativos e sistemas, permitindo que as empresas se conectem melhor com
+                    seus clientes e melhorem suas operações comerciais.</p>
+            </section>
+        </div>
+        <div class="h2-benefi"><h2>Serviços</h2></div>
+        <section class="card-beneficios">
+            <div class="card">
+                <img class="img" src="../img/2fa.png" alt="Imagem 1" />
+                <div class="card-text">
+                    <h2>2FA</h2>
+                    <a href="./2fa.html">Saiba Mais</a>
                 </div>
-                <img src="../img/2fa-top.png" alt="Essa é uma imagem 2Fa">
             </div>
-        </section>
-        <section class="main-produto-descri">
-            <div class="main-produto-descri-texto">
-                <h2>Como Funciona?</h2>
-                <p>2FA, ou Autenticação de Dois Fatores, é um método de segurança utilizado para proteger suas contas
-                    online e reforçar a autenticação tradicional baseada em senha. Ele adiciona uma camada extra de
-                    segurança exigindo que você forneça dois elementos distintos para verificar sua identidade antes de
-                    acessar uma conta.
-                    O processo de 2FA geralmente envolve três componentes principais: a senha, algo que você possui e
-                    algo que você é. A senha é o primeiro fator, que você já está familiarizado, e é geralmente
-                    combinada com outros dois fatores para maior segurança.
-                    O segundo fator pode ser algo que você possui, como um dispositivo móvel, token de segurança ou
-                    chave de hardware. Isso garante que apenas você, o proprietário legítimo da conta, possa ter acesso,
-                    pois o dispositivo físico é necessário para concluir o processo de autenticação.
-                    O terceiro fator é algo que você é, uma característica biométrica única, como impressão digital,
-                    reconhecimento facial ou de voz. Esses atributos pessoais são difíceis de serem replicados por
-                    outras pessoas, aumentando ainda mais a segurança do processo de autenticação.</p>
+
+            <div class="card">
+                <img class="tell" src="../img/tell.png" alt="Imagem 2" />
+                <div class="card-text">
+                    <h2>Número Máscara</h2>
+                    <a href="./tell.html">Saiba Mais</a>
+                </div>
             </div>
-            <img src="../img/2fa-descri.png" alt="Essa é uma imagem de 2Fa.">
-        </section>
-        <section class="main-produto-obj">
-            <img src="../img/2fa-descri2.png" alt="Essa é uma imagem de 2Fa.">
-            <div class="main-produto-obj-texto">
-                <h2>Qual Objetivo?</h2>
-                <p>O objetivo principal do 2FA é proteger suas contas online contra ataques de hackers e roubo de
-                    identidade. A
-                    autenticação tradicional baseada apenas em senha pode ser comprometida caso sua senha seja
-                    descoberta,
-                    vazada ou se torne vulnerável de alguma forma. Com o 2FA, mesmo que um invasor tenha acesso à sua
-                    senha, ele
-                    ainda precisará do segundo fator, que geralmente é algo que eles não possuem. O 2FA é uma medida
-                    eficaz para
-                    aumentar a segurança de suas contas online, reduzindo significativamente as chances de que um
-                    invasor possa
-                    obter acesso não autorizado. Ao adotar o 2FA, você está fortalecendo sua defesa digital e protegendo
-                    seus
-                    dados pessoais e informações confidenciais contra ameaças cibernéticas.</p>
+
+            <div class="card">
+                <img class="img" src="../img/email-auto.png" alt="Imagem 3" />
+                <div class="card-text">
+                    <h2>SMS Programável</h2>
+                    <a href="./sms.html">Saiba Mais</a>
+                </div>
             </div>
+
+            <div class="card">
+                <img class="img" src="../img/verify-call.png" alt="Imagem 4" />
+                <div class="card-text">
+                    <h2>Google Verified Calls</h2>
+                    <a href="./calls.html">Saiba Mais</a>
+                </div>
+
+            </div>
+
         </section>
+
+
+
+
+
+
+
     </div>
     <footer>
         <section class="container-footer">

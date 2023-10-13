@@ -2,31 +2,23 @@
 session_start();
 // print_r($_SESSION);
 
-require_once('tokenFunc.php');
-
-if(!isset($_SESSION['usu_login']) == true && !isset($_SESSION['usu_senha']) == true) {
+if(!isset($_SESSION['usu_login']) == true && !isset($_SESSION['usu_senha']) == true && !isset($_SESSION['tipo_usuario']) == 'master') {
   unset($_SESSION['usu_login']);
   unset($_SESSION['usu_senha']);
+  unset($_SESSION['tipo_usuario']);
   header('Location: Login.php');
-}
-
-$token_key = 'temp_token';
-if(!verificarToken($token_key)) {
-  unset($_SESSION['autenticado_2fa']);
-  unset($_SESSION['usu_cpf']);
-  header('Location: 2ffa.php');
-}
-
-if(!isset($_SESSION['autenticado_2fa'])) {
-  unset($_SESSION['autenticado_2fa']);
-  unset($_SESSION['usu_cpf']);
-  header('Location: 2ffa.php');
 }
 
 $logado_login = $_SESSION['usu_login'];
 $logado_senha = $_SESSION['usu_senha'];
 
-include_once('config.php');
+$required_role = 'master';
+
+if($_SESSION['role'] !== $required_role) {
+  header('Location: perfil.php');
+}
+
+include_once('../components/config.php');
 
 $sql = "SELECT * FROM usuarios WHERE usu_login = '$logado_login' AND usu_senha = '$logado_senha'";
 $result = $conexao->query($sql);
@@ -55,15 +47,14 @@ if($result && $result->num_rows > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfil</title>
+  <title>Master</title>
 </head>
-
 <body>
-  Bem vindo ao perfil de Usúario, <?php echo $logado_login; ?> <br>
+  <h1>Perfil Master</h1>
+  Bem vindo ao perfil de Usúario Master, <?php echo $logado_login; ?> <br>
   Nome: <?php echo $logado_nome; ?><br>
   Sexo: <?php echo $logado_sexo; ?><br>
   Data de Nascimento: <?php echo $logado_dataNasc; ?> <br>
@@ -73,7 +64,6 @@ if($result && $result->num_rows > 0) {
   Telefone Fixo: <?php echo $logado_telefoneFixo; ?> <br>
   Endereço: <?php echo $logado_endereco; ?> <br>
   <a href="../index.php">Home</a>
-  <a href="sair.php">Sair</a>
+  <a href="../components/sair.php">Sair</a>
 </body>
-
 </html>

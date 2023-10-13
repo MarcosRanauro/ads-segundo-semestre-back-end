@@ -4,15 +4,23 @@ session_start();
 
   if(isset($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['pass'])) {
     //acessa
-    include_once('config.php');
+    include_once('../components/config.php');
     $login = $_POST['login'];
     $pass = $_POST['pass'];
 
     // print_r($login);
     // print_r($pass);
 
-    $sql = "SELECT usu_login, usu_senha, tipo_usuario FROM usuarios WHERE usu_login = '$login' AND usu_senha = '$pass'";
+    $sql_cpf = "SELECT usu_cpf FROM usuarios WHERE usu_login = '$login'";
+    $result_cpf = $conexao->query($sql_cpf);
 
+    if($result_cpf && $result_cpf->num_rows > 0) {
+      $row_cpf = $result_cpf->fetch_assoc();
+      $cpf = $row_cpf['usu_cpf'];
+      $_SESSION['usu_cpf'] = $cpf;
+    }
+
+    $sql = "SELECT * FROM usuarios WHERE usu_login = '$login' AND usu_senha = '$pass'";
     $result = $conexao->query($sql);
 
     // print_r($result);

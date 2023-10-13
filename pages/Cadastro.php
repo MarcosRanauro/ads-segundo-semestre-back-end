@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['submit'])) {
-    include_once('config.php');
+    include_once('../components/config.php');
 
     $nome = $_POST['nome'];
     $dataNascimento = $_POST['dataNascimento'];
@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         $errorMessages = json_encode($errors);
         
         // Redirecione o usuário para a página de erro com as mensagens de erro
-        header("Location: erro.php?errors=$errorMessages");
+        header("Location: ../components/erro.php?errors=$errorMessages");
         exit; // Encerre o script
     } else {
         // Não houve erros, prossiga com a inserção no banco de dados
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
             exit; // Encerre o script
         } else {
             // Redirecione o usuário para a página de erro
-            header("Location: erro.php");
+            header("Location: ../components/erro.php");
             exit; // Encerre o script
         }
     }
@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
         </section>
 
         <section class="cabecalho-secundario">
-            <a href="../index.html">
+            <a href="../index.php">
                 <img src="../img/navbar-logo.png" alt="essa é a logo da Telecall">
             </a>
             <nav>
@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                 <div class="form-control form-control-lg input-container">
                     <h1>Crie sua conta</h1>
                     <label for="nome" class="col-form-label">Nome</label>
-                    <input class="form-control" type="text" name="nome" id="nome" minlength="15" maxlength="60">
+                    <input class="form-control" type="text" name="nome" id="nome" minlength="15" maxlength="60" require>
 
                     <label for="dataNascimento" class="col-form-label">Data de Nascimento:</label>
                     <input class="form-control" type="date" id="dataNascimento" name="dataNascimento">
