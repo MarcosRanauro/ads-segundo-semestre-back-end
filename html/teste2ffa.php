@@ -25,8 +25,6 @@ if (isset($_POST['submit']) && !empty($_POST['cpf']) && isset($_SESSION['usu_cpf
       $_SESSION['usu_cpf'] = $cpf;
       header('Location: perfil.php');
     } else {
-      unset($_SESSION['autenticado_2fa']);
-      unset($_SESSION['usu_cpf']);
       header('Location: erro2ffa.php');
     }
   } else {
