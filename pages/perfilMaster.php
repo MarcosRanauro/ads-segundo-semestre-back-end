@@ -46,7 +46,7 @@ if ($result && $result->num_rows > 0) {
 
 $sql_dadosDB = "SELECT * FROM usuarios ORDER BY usu_nome";
 $result_dadosDB = $conexao->query($sql_dadosDB);
-print_r($result_dadosDB);
+// print_r($result_dadosDB);
 
 
 ?>

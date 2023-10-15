@@ -40,7 +40,7 @@
 					</span>
 					<span class="telecall-logo">
 						<a href="../index.php">
-							<img src="../images/logoTelecall.png" alt="logo" width="100px" height="100px">
+							<img src="../img/mjp-att.png" alt="essa é a logo da MJP" style="height:190px; width:220px">
 						</a>
 					</span>
 					<span class="login100-form-title p-b-48">
