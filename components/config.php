@@ -6,6 +6,10 @@
 
   $conexao = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName);
 
+  if($conexao->error) {
+    die("Erro: " . $conexao->error);
+  }
+
   // if($conexao->connect_errno) {
   //   echo "Erro";
   // } else {
