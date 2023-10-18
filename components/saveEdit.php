@@ -1,5 +1,5 @@
 <?php
-  include_once('../components/config.php');
+  include_once('config.php');
 
   if(isset($_POST['update'])) {
     $id = $_POST['id'];
@@ -20,6 +20,6 @@
 
     $result = $conexao->query($sqlUpdate);
   }
-  header('Location: perfilMaster.php');
+  header('Location: ../pages/perfilMaster.php');
 
 ?>

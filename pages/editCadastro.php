@@ -37,6 +37,8 @@ if (!empty($_GET['id'])) {
     } else {
         header('Location: perfilMaster.php');
     }
+} else {
+    header('Location: perfilMaster.php');
 }
 ?>
 
@@ -124,7 +126,7 @@ if (!empty($_GET['id'])) {
             <img src="../img/img-cadastro.png" alt="essa é a imagem principal da página">
         </section>
         <section>
-            <form action="saveEdit.php" method="POST" class="container" id="form">
+            <form action="../components/saveEdit.php" method="POST" class="container" id="form">
                 <div class="form-control form-control-lg input-container">
                     <h1>Editar Cadastro</h1>
                     <label for="nome" class="col-form-label">Nome</label>
