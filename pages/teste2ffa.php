@@ -18,7 +18,7 @@ if (isset($_POST['submit']) && !empty($_POST['cpf']) && isset($_SESSION['usu_cpf
     if ($cpf === $cpf_session) {
       $temp_token = bin2hex(random_bytes(16));
       $_SESSION['temp_token'] = $temp_token;
-      $_SESSION['temp_token_exp'] = time() + 5;
+      $_SESSION['temp_token_exp'] = time() + 1500;
 
       // Defina a variável de sessão para indicar que o usuário passou pela autenticação 2FA.
       $_SESSION['autenticado_2fa'] = true;
