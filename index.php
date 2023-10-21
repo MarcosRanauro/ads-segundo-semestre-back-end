@@ -39,7 +39,6 @@ if (!isset($_SESSION['tipo_usuario'])) {
                 <li><a class="menu-primario" href="#">Institucional</a></li>
             </ul>
             <ul class="navbar-right">
-                <!-- Verifique se o usuário está autenticado e mostre informações específicas -->
                 <?php if ($_SESSION['tipo_usuario']) { ?>
                     <li>Olá, <?php echo $_SESSION['usu_login']; ?></li>
                     <?php if ($_SESSION['tipo_usuario'] === 'master') { ?>

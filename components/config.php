@@ -1,10 +1,11 @@
 <?php
-  $dbHost = "127.0.0.1";
-  $dbUserName = "root";
-  $dbPassword = "1234";
+  $dbHost = $_ENV['Telefonia.mysql.database.railway.app'];
+  $dbUserName = $_ENV['root'];
+  $dbPassword = $_ENV['1234'];
   $dbName = "Telefonia";
+  $dbPort = $_ENV['3306'];
 
-  $conexao = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName);
+  $conexao = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName, $dbPort);
 
   if($conexao->error) {
     die("Erro: " . $conexao->error);
