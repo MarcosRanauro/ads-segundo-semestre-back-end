@@ -1,5 +1,4 @@
 <?php
-  $MYSQL_URL = $_ENV['mysql://root:YtFcUv0C5FIRk7qhdMkN@containers-us-west-172.railway.app:7658/railway'];
   $MYSQLDATABASE = $_ENV['railway'];
   $MYSQLHOST = $_ENV['containers-us-west-172.railway.app'];
   $MYSQLPASSWORD = $_ENV['YtFcUv0C5FIRk7qhdMkN'];
@@ -17,4 +16,3 @@
   // } else {
   //   echo "Conectado com sucesso";
   // };
-?>
