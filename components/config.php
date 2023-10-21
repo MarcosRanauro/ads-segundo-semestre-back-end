@@ -1,18 +1,13 @@
 <?php
-  $MYSQLDATABASE = $_ENV['railway'];
   $MYSQLHOST = $_ENV['containers-us-west-118.railway.app'];
-  $MYSQLPASSWORD = $_ENV['wQjnuMVOknRbYzDQ2MBw'];
-  $MYSQLPORT = $_ENV['7529'];
   $MYSQLUSER = $_ENV['root'];
+  $MYSQLPASSWORD = $_ENV['wQjnuMVOknRbYzDQ2MBw'];
+  $MYSQLDATABASE = $_ENV['railway'];
+  $MYSQLPORT = $_ENV['7529'];
+  
+  $conexao = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQLPASSWORD, $MYSQLDATABASE, $MYSQLPORT);  
 
-  $conexao = new mysqli($MYSQLDATABASE, $MYSQLHOST, $MYSQLPASSWORD, $MYSQLPORT, $MYSQLUSER);
-
-  if($conexao->error) {
-    die("Erro: " . $conexao->error);
+  if($conexao->connect_error) {
+    die("Erro de conexão: " . $conexao->connect_error);
   }
-
-  // if($conexao->connect_errno) {
-  //   echo "Erro";
-  // } else {
-  //   echo "Conectado com sucesso";
-  // };
+?>
