@@ -11,6 +11,10 @@ if (verificarToken($token_key)) {
     $usuario_autenticado = false;
 }
 
+if (!isset($_SESSION['tipo_usuario'])) {
+    $_SESSION['tipo_usuario'] = ''; // Defina um valor padrão, se necessário
+}
+
 ?>
 
 <!DOCTYPE html>
