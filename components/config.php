@@ -1,11 +1,11 @@
 <?php
   $MYSQLDATABASE = $_ENV['railway'];
-  $MYSQLHOST = $_ENV['containers-us-west-172.railway.app'];
-  $MYSQLPASSWORD = $_ENV['YtFcUv0C5FIRk7qhdMkN'];
-  $MYSQLPORT = $_ENV['7658'];
+  $MYSQLHOST = $_ENV['containers-us-west-118.railway.app'];
+  $MYSQLPASSWORD = $_ENV['wQjnuMVOknRbYzDQ2MBw'];
+  $MYSQLPORT = $_ENV['7529'];
   $MYSQLUSER = $_ENV['root'];
 
-  $conexao = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQLPASSWORD, $MYSQLDATABASE, $MYSQLPORT);
+  $conexao = new mysqli($MYSQLDATABASE, $MYSQLHOST, $MYSQLPASSWORD, $MYSQLPORT, $MYSQLUSER);
 
   if($conexao->error) {
     die("Erro: " . $conexao->error);
