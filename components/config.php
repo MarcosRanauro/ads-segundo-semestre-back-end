@@ -1,21 +1,24 @@
 <?php
-try {
-    $hostname = $_ENV['containers-us-west-118.railway.app'];
-    $username = $_ENV['root'];
-    $password = $_ENV['wQjnuMVOknRbYzDQ2MBw'];
-    $database = $_ENV['railway'];
-    $port = $_ENV['7529'];
+  // $MYSQLHOST = $_ENV['containers-us-west-118.railway.app'];
+  // $MYSQLUSER = $_ENV['root'];
+  // $MYSQLPASSWORD = $_ENV['wQjnuMVOknRbYzDQ2MBw'];
+  // $MYSQLDATABASE = $_ENV['railway'];
+  // $MYSQLPORT = $_ENV['7529'];
 
-    $dsn = "mysql:host=$hostname;dbname=$database;port=$port";
-    $options = array(
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_EMULATE_PREPARES => false,
-    );
+  $host = 'containers-us-west-118.railway.app';
+  $user = 'root';
+  $password = 'wQjnuMVOknRbYzDQ2MBw';
+  $database = 'railway';
+  $port = '7529';
+  
+  $conexao = "mysql:host=$host;dbname=$database;port=$port";
+  try {
+    $pdo = new \PDO($conexao, $user, $password);
+  } catch (\PDOException $e) {
+    echo "Erro de conexão: " . $e->getMessage();
+  }  
 
-    $conexao = new PDO($dsn, $username, $password, $options);
-} catch (PDOException $e) {
-    die("Erro de conexão: " . $e->getMessage());
-}
-
-// Agora você está conectado ao banco de dados e pode executar consultas usando o objeto $conexao
+  // if($conexao->connect_error) {
+  //   die("Erro de conexão: " . $conexao->connect_error);
+  // }
 ?>

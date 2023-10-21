@@ -21,7 +21,7 @@ if ($_SESSION['role'] !== $required_role) {
 }
 
 $sql = "SELECT * FROM usuarios WHERE usu_login = :login AND usu_senha = :senha";
-$stmt = $conexao->prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->bindParam(':login', $logado_login, PDO::PARAM_STR);
 $stmt->bindParam(':senha', $logado_senha, PDO::PARAM_STR);
 $stmt->execute();
@@ -48,7 +48,7 @@ if ($stmt->rowCount() > 0) {
 }
 
 $sql_dadosDB = "SELECT * FROM usuarios ORDER BY usu_nome";
-$result_dadosDB = $conexao->query($sql_dadosDB);
+$result_dadosDB = $pdo->query($sql_dadosDB);
 // print_r($result_dadosDB);
 ?>
 

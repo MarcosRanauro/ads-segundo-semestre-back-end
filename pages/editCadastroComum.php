@@ -6,7 +6,7 @@ if (!empty($_GET['id'])) {
 
   // Prepare a consulta SQL
   $sqlSelectComum = "SELECT * FROM usuarios WHERE id = :id";
-  $stmt = $conexao->prepare($sqlSelectComum);
+  $stmt = $pdo->prepare($sqlSelectComum);
   $stmt->bindParam(':id', $id, PDO::PARAM_INT);
   $stmt->execute();
 

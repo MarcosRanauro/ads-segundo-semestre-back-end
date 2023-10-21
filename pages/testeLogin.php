@@ -12,7 +12,7 @@ if (isset($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['pass'])
   // print_r($pass);
 
   $sql_cpf = "SELECT usu_cpf FROM usuarios WHERE usu_login = :login";
-  $stmt_cpf = $conexao->prepare($sql_cpf);
+  $stmt_cpf = $pdo->prepare($sql_cpf);
   $stmt_cpf->bindParam(':login', $login, PDO::PARAM_STR);
   $stmt_cpf->execute();
 
@@ -22,7 +22,7 @@ if (isset($_POST['submit']) && !empty($_POST['login']) && !empty($_POST['pass'])
   }
 
   $sql = "SELECT * FROM usuarios WHERE usu_login = :login AND usu_senha = :pass";
-  $stmt = $conexao->prepare($sql);
+  $stmt = $pdo->prepare($sql);
   $stmt->bindParam(':login', $login, PDO::PARAM_STR);
   $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
   $stmt->execute();

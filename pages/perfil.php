@@ -29,7 +29,7 @@ $logado_senha = $_SESSION['usu_senha'];
 include_once('../components/config.php');
 
 $sql = "SELECT * FROM usuarios WHERE usu_login = :logado_login AND usu_senha = :logado_senha";
-$stmt = $conexao->prepare($sql);
+$stmt = $pdo->prepare($sql);
 $stmt->bindParam(':logado_login', $logado_login, PDO::PARAM_STR);
 $stmt->bindParam(':logado_senha', $logado_senha, PDO::PARAM_STR);
 $stmt->execute();

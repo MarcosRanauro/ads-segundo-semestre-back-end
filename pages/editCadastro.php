@@ -5,7 +5,7 @@ if (!empty($_GET['id'])) {
     $id = $_GET['id'];
 
     $sqlSelect = "SELECT * FROM usuarios WHERE id = :id";
-    $stmt = $conexao->prepare($sqlSelect);
+    $stmt = $pdo->prepare($sqlSelect);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
 

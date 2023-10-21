@@ -8,7 +8,7 @@ if (isset($_POST['submit']) && !empty($_POST['cpf']) && isset($_SESSION['usu_cpf
     $cpf_session = $_SESSION['usu_cpf'];
 
     $sql = "SELECT * FROM usuarios WHERE usu_cpf = :cpf";
-    $stmt = $conexao->prepare($sql);
+    $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':cpf', $cpf, PDO::PARAM_STR);
     $stmt->execute();
     
