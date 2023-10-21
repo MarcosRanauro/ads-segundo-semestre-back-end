@@ -2,7 +2,7 @@
   $DB_HOST = $_ENV['Telefonia.mysql.database.railway.app'];
   $DB_USERNAME = $_ENV['root'];
   $DB_SENHA = $_ENV[''];
-  $DB_DATABASE = $_ENV['Telefonia'];
+  $DB_DATABASE = $_ENV['Telefonia2'];
   $DB_PORT = $_ENV['3306'];
 
   $conexao = new mysqli($DB_HOST, $DB_USERNAME, $DB_SENHA, $DB_DATABASE, $DB_PORT);
