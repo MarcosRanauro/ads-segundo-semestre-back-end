@@ -40,7 +40,7 @@ if (!isset($_SESSION['tipo_usuario'])) {
             </ul>
             <ul class="navbar-right">
                 <?php if ($_SESSION['tipo_usuario']) { ?>
-                <?php require_once('./components/header.php'); ?>
+                <?php require_once('./components/headerIndex.php'); ?>
                 <?php } else { ?>
                     <li><a class="menu-primario" href="#">WhatsApp</a></li>
                     <li><a class="menu-primario" href="#">FAQ</a></li>

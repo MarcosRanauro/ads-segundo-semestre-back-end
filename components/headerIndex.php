@@ -15,11 +15,11 @@
         <?php if ($_SESSION['tipo_usuario']) { ?>
             <li>Olá, <?php echo $_SESSION['usu_login']; ?></li>
             <?php if ($_SESSION['tipo_usuario'] === 'master') { ?>
-                <li><a class="peril-logado" href="../pages/perfilMaster.php">Meu Perfil</a></li>
+                <li><a class="peril-logado" href="pages/perfilMaster.php">Meu Perfil</a></li>
             <?php } else { ?>
-                <li><a class="peril-logado" href="../pages/perfil.php">Meu Perfil</a></li>
+                <li><a class="peril-logado" href="pages/perfil.php">Meu Perfil</a></li>
             <?php } ?>
-            <li><a class="peril-logado" href="../components/sair.php">Sair</a></li>
+            <li><a class="peril-logado" href="./components/sair.php">Sair</a></li>
         <?php } else { ?>
             <li><a class="menu-primario" href="#">WhatsApp</a></li>
             <li><a class="menu-primario" href="#">FAQ</a></li>
