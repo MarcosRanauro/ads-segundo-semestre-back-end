@@ -1,11 +1,12 @@
 <?php
-  $DB_HOST = $_ENV['Telefonia.mysql.database.railway.app'];
-  $DB_USERNAME = $_ENV['root'];
-  $DB_SENHA = $_ENV[''];
-  $DB_DATABASE = $_ENV['Telefonia2'];
-  $DB_PORT = $_ENV['3306'];
+  $MYSQL_URL = $_ENV['mysql://root:YtFcUv0C5FIRk7qhdMkN@containers-us-west-172.railway.app:7658/railway'];
+  $MYSQLDATABASE = $_ENV['railway'];
+  $MYSQLHOST = $_ENV['containers-us-west-172.railway.app'];
+  $MYSQLPASSWORD = $_ENV['YtFcUv0C5FIRk7qhdMkN'];
+  $MYSQLPORT = $_ENV['7658'];
+  $MYSQLUSER = $_ENV['root'];
 
-  $conexao = new mysqli($DB_HOST, $DB_USERNAME, $DB_SENHA, $DB_DATABASE, $DB_PORT);
+  $conexao = new mysqli($MYSQLHOST, $MYSQLUSER, $MYSQLPASSWORD, $MYSQLDATABASE, $MYSQLPORT);
 
   if($conexao->error) {
     die("Erro: " . $conexao->error);
