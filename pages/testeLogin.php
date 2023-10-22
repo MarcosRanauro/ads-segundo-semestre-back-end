@@ -41,7 +41,7 @@ session_start();
       $_SESSION['role'] = $row['tipo_usuario'];
       $_SESSION['tipo_usuario'] = $logado_tipoUsuario;
       if($logado_tipoUsuario == 'master') {
-        header('Location: perfilMaster.php');
+        header('Location: ../index.php');
       } else if($logado_tipoUsuario == 'comum') {
         header('Location: 2ffa.php');
       }
